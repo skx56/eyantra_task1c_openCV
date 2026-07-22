@@ -23,6 +23,17 @@ This repository contains a focused OpenCV solution for an eYantra task. The proj
 
 The project centers on one Python implementation file. This keeps the challenge solution easy to run and inspect while leaving room for future modularization into preprocessing, detection, and reporting functions.
 
+## Architecture Diagram
+
+```mermaid
+flowchart LR
+  Map["Input Map Image"] --> Script["WD_3200_map.py"]
+  Script --> Preprocess["Image Preprocessing"]
+  Preprocess --> Detect["OpenCV Detection Logic"]
+  Detect --> Extract["Structured Map Information"]
+  Extract --> Output["Task Output"]
+```
+
 ## Technology Stack
 
 - Python implementation.
